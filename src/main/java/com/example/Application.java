@@ -26,7 +26,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableAspectJAutoProxy
 @EnableAsync
 @EnableConfigurationProperties({MyProperties.class})
-@MapperScan(basePackages = {"com.example.mapper.aaaaa"})
+@MapperScan(basePackages = {"com.example.mapper.bb"} )
 public class Application {
 
     public static void main(String[] args) {
