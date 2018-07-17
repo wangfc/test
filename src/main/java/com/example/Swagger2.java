@@ -2,6 +2,8 @@ package com.example;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -16,7 +18,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
-public class Swagger2 {
+public class Swagger2 extends WebMvcConfigurationSupport {
 
 
     //swagger2的配置文件，这里可以配置swagger2的一些基本的内容，比如扫描的包等等
@@ -46,4 +48,13 @@ public class Swagger2 {
                 .build();
     }
 
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//		super.addResourceHandlers(registry);
+//		registry.addResourceHandler("/**").addResourceLocations("/static/");
+        registry.addResourceHandler("swagger-ui.html")
+                .addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/webjars/**")
+                .addResourceLocations("classpath:/META-INF/resources/webjars/");
+    }
 }

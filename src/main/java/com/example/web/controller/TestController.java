@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -56,7 +57,7 @@ public class TestController {
 
     @ApiOperation(value = "更新用户信息",notes = "更新用户信息")
     @ApiImplicitParams({@ApiImplicitParam(name = "user",value = "用户信息",dataType = "User",required = true,paramType = "body")})
-    @RequestMapping("/user/update")
+    @RequestMapping(value = "/user/update" ,method = RequestMethod.POST)
     public String update(@RequestBody  com.example.entity.User user){
         try {
             userService.update(user);
