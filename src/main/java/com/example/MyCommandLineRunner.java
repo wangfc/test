@@ -14,7 +14,7 @@ import javax.annotation.Resource;
  * @date 2018/7/10
  */
 @Component
-@Order(1)
+@Order(2)
 @Slf4j
 public class MyCommandLineRunner implements CommandLineRunner {
 
