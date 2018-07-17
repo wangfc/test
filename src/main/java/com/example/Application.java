@@ -23,7 +23,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableAspectJAutoProxy
 @EnableAsync
 @EnableConfigurationProperties({MyProperties.class})
-@MapperScan(basePackages = {"com.example.mapper.cc"} )
+@MapperScan(basePackages = {"com.example.mapper"} )
 public class Application {
 
     public static void main(String[] args) {
