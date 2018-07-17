@@ -11,6 +11,9 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+/**
+ * dfafdas
+ */
 
 /**
  * @author wangfc
@@ -23,7 +26,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableAspectJAutoProxy
 @EnableAsync
 @EnableConfigurationProperties({MyProperties.class})
-@MapperScan(basePackages = {"com.example.mapper"} )
+@MapperScan(basePackages = {"com.example.mapper.aaaaa"})
 public class Application {
 
     public static void main(String[] args) {
